@@ -1,85 +1,353 @@
-<h1>JEJU TRAVEL</h1>
-<h2>제주도 여행</h2>
-<h3>추천 여행지</h3>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>제주도 여행</title>
 
-<p>제주도의 아름다운 여행지를 소개합니다.</p>
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<div>
-    <span>추천 여행지</span>
-</div>
+<body>
 
-<ul>
-    <li>성산일출봉</li>
-    <li>한라산</li>
-    <li>협재해수욕장</li>
-</ul>
+    <!-- 제목 부분 -->
+    <div id="header">
+        <h1>JEJU TRAVEL</h1>
+        <p>제주도 여행 소개</p>
 
-<ol>
-    <li>여행지 선택</li>
-    <li>맛집 방문</li>
-    <li>바다 구경</li>
-</ol>
+        <ul>
+            <li><a href="#home">홈</a></li>
+            <li><a href="#place">여행지</a></li>
+            <li><a href="#food">맛집</a></li>
+            <li><a href="#course">여행코스</a></li>
+        </ul>
+    </div>
 
-<a href="#place">여행지 보기</a>
 
-<img src="사진주소" alt="제주도 여행지">
+    <!-- 전체 내용 -->
+    <div id="main">
 
-<table>
-    <tr>
-        <th>여행지</th>
-        <th>추천 시간</th>
-    </tr>
-    <tr>
-        <td>성산일출봉</td>
-        <td>아침</td>
-    </tr>
-</table>
+        <!-- 여행 소개 -->
+        <div id="home">
+            <h2>제주도 여행</h2>
 
+            <p>
+                아름다운 자연과 다양한 볼거리가 있는
+                <span>제주도</span>를 소개합니다.
+            </p>
+
+            <br>
+
+            <img src="jeju.jpg" alt="제주도 바다 사진">
+
+            <br><br>
+
+            <a href="#place">여행지 알아보기</a>
+        </div>
+
+
+        <!-- 추천 여행지 -->
+        <div id="place">
+
+            <h2>추천 여행지</h2>
+
+            <p>제주도에서 가볼 만한 여행지를 소개합니다.</p>
+
+
+            <div class="place">
+
+                <h3>성산일출봉</h3>
+
+                <img src="seongsan.jpg" alt="성산일출봉 사진">
+
+                <p>
+                    제주도의 대표적인 관광지입니다.
+                </p>
+
+            </div>
+
+
+            <div class="place">
+
+                <h3>한라산</h3>
+
+                <img src="hallasan.jpg" alt="한라산 사진">
+
+                <p>
+                    제주도의 아름다운 자연을 볼 수 있습니다.
+                </p>
+
+            </div>
+
+
+            <div class="place">
+
+                <h3>협재해수욕장</h3>
+
+                <img src="hyeopjae.jpg" alt="협재해수욕장 사진">
+
+                <p>
+                    아름다운 바다를 볼 수 있는 곳입니다.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 맛집 -->
+        <div id="food">
+
+            <h2>제주 맛집</h2>
+
+            <p>제주도에서 먹어볼 만한 음식입니다.</p>
+
+            <ul>
+                <li>제주 흑돼지</li>
+                <li>갈치조림</li>
+                <li>고기국수</li>
+                <li>제주 감귤</li>
+            </ul>
+
+        </div>
+
+
+        <!-- 여행 코스 -->
+        <div id="course">
+
+            <h2>추천 여행 코스</h2>
+
+            <ol>
+                <li>성산일출봉 방문</li>
+                <li>제주 맛집 방문</li>
+                <li>협재해수욕장 방문</li>
+            </ol>
+
+        </div>
+
+
+        <!-- 여행 정보 표 -->
+        <div id="information">
+
+            <h2>여행 정보</h2>
+
+            <table>
+
+                <tr>
+                    <th>여행지</th>
+                    <th>추천 시간</th>
+                    <th>추천 활동</th>
+                </tr>
+
+                <tr>
+                    <td>성산일출봉</td>
+                    <td>아침</td>
+                    <td>일출 보기</td>
+                </tr>
+
+                <tr>
+                    <td>한라산</td>
+                    <td>오전</td>
+                    <td>자연 구경</td>
+                </tr>
+
+                <tr>
+                    <td>협재해수욕장</td>
+                    <td>오후</td>
+                    <td>바다 구경</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- 여행 TIP -->
+        <div id="tip">
+
+            <h2>제주 여행 TIP</h2>
+
+            <p>
+                여행하기 전에 날씨를 확인하고
+                편한 옷과 신발을 준비하세요.
+            </p>
+
+            <button onclick="recommend()">
+                여행지 추천받기
+            </button>
+
+            <p id="result"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 하단 -->
+    <div id="footer">
+        <p>JEJU TRAVEL</p>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function recommend() {
+
+            document.getElementById("result").innerHTML =
+            "오늘은 성산일출봉을 추천합니다!";
+
+        }
+
+    </script>
+
+</body>
+</html>
+
+/* 전체 화면 */
 body {
-    background-color: #f5f5f5;
+    margin: 0;
+    background-color: #f2f2f2;
 }
 
-.header {
+/* 위쪽 제목 부분 */
+#header {
     width: 100%;
-    height: 100px;
-    background-color: lightblue;
+    height: 120px;
+    background-color: #bde0f2;
     border: 2px solid black;
     padding: 20px;
 }
 
-.container {
+/* 메뉴 */
+#header li {
+    display: inline-block;
+    margin: 10px;
+}
+
+#header a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 왼쪽 메뉴 + 오른쪽 본문 */
+#layout {
     display: flex;
+    width: 1100px;
+    margin: 20px auto;
 }
 
-.sidebar {
-    width: 200px;
-    height: 600px;
-    background-color: lightgreen;
+/* 왼쪽 사이드 메뉴 */
+#sidebar {
+    width: 180px;
+    height: 500px;
+    background-color: #d8f3dc;
     border: 2px solid black;
-    margin: 20px;
     padding: 20px;
 }
 
-.main {
-    width: 700px;
+/* 사이드 메뉴 글자 */
+#sidebar li {
+    margin: 20px;
+}
+
+/* 본문 */
+#content {
+    width: 800px;
+    margin-left: 20px;
+}
+
+/* 홈 */
+#home {
+    background-color: #e0f7fa;
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#home img {
+    width: 500px;
+    height: 250px;
+}
+
+/* 여행지 */
+#place {
     background-color: white;
     border: 2px solid black;
-    margin: 20px;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
+/* 여행지 카드 */
 .place {
     display: inline-block;
-    width: 180px;
-    height: 200px;
-    background-color: lightyellow;
+    width: 210px;
+    height: 280px;
+    background-color: #fff3b0;
     border: 2px solid black;
     margin: 10px;
     padding: 10px;
 }
 
-function recommend() {
-    document.getElementById("result").innerHTML =
-    "제주도 여행을 즐겨보세요!";
+.place img {
+    width: 190px;
+    height: 130px;
+}
+
+/* 맛집 */
+#food {
+    background-color: #fce4ec;
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 여행 코스 */
+#course {
+    background-color: #e8eaf6;
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 여행 정보 */
+#information {
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 표 */
+table {
+    width: 100%;
+    border: 2px solid black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* 여행 팁 */
+#tip {
+    background-color: #e1bee7;
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 아래쪽 */
+#footer {
+    width: 100%;
+    height: 80px;
+    background-color: #bde0f2;
+    border: 2px solid black;
+    padding: 20px;
+}
+#layout {
+    display: flex;
+}
+.place {
+    display: inline-block;
 }
 
