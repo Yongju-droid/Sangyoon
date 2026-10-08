@@ -1,93 +1,85 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 스타일 비교 실습</title>
-    <!-- 아래 href의 파일명을 style1.css, style2.css, style3.css로 바꾸며 확인하세요 -->
-    <link rel="stylesheet" href="style2.css">
-</head>
-<body>
+<h1>JEJU TRAVEL</h1>
+<h2>제주도 여행</h2>
+<h3>추천 여행지</h3>
 
-    <header>
-        <nav>
-            <div class="logo">CSS LAB</div>
-            <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">소개</a></li>
-                <li><a href="#">프로젝트</a></li>
-                <li><a href="#">연락처</a></li>
-            </ul>
-        </nav>
-    </header>
+<p>제주도의 아름다운 여행지를 소개합니다.</p>
 
-    <main>
-        <section class="hero">
-            <h1>하나의 HTML, 세 가지 스타일</h1>
-            <p>CSS 파일만 교체해도 웹페이지의 디자인과 분위기가 완전히 달라집니다.</p>
-            <div class="btn-group">
-                <button class="btn-primary">주요 버튼</button>
-                <button class="btn-secondary">보조 버튼</button>
-            </div>
-        </section>
+<div>
+    <span>추천 여행지</span>
+</div>
 
-        <section class="grid-container">
-            <article class="card">
-                <h2>1. 웹 표준 요소</h2>
-                <p>HTML은 구조를 담당하고, CSS는 <span>시각적 스타일</span>을 담당합니다.</p>
-                <blockquote>"디자인은 단순히 어떻게 보이고 느껴지는가가 아니라, 어떻게 작동하는가이다."</blockquote>
-                <h3>학습 목록</h3>
-                <ul>
-                    <li>HTML5 시맨틱 태그</li>
-                    <li>CSS3 스타일링 및 레이아웃</li>
-                    <li>반응형 웹 디자인 기본</li>
-                </ul>
-            </article>
+<ul>
+    <li>성산일출봉</li>
+    <li>한라산</li>
+    <li>협재해수욕장</li>
+</ul>
 
-            <article class="card">
-                <h2>2. 폼 & 데이터 표</h2>
-                <form onsubmit="return false;">
-                    <div class="form-group">
-                        <label for="username">사용자 이름</label>
-                        <input type="text" id="username" placeholder="이름을 입력하세요">
-                    </div>
-                    <div class="form-group">
-                        <label for="role">구분</label>
-                        <select id="role">
-                            <option>학생</option>
-                            <option>강사</option>
-                        </select>
-                    </div>
-                </form>
+<ol>
+    <li>여행지 선택</li>
+    <li>맛집 방문</li>
+    <li>바다 구경</li>
+</ol>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>과목</th>
-                            <th>상태</th>
-                            <th>태그</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>HTML</td>
-                            <td>완료</td>
-                            <td><span class="badge success">기본</span></td>
-                        </tr>
-                        <tr>
-                            <td>CSS</td>
-                            <td>진행 중</td>
-                            <td><span class="badge warning">스타일</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </article>
-        </section>
-    </main>
+<a href="#place">여행지 보기</a>
 
-    <footer>
-        <p>&copy; 2026 웹 프로그래밍 실습 페이지. All rights reserved.</p>
-    </footer>
+<img src="사진주소" alt="제주도 여행지">
 
-</body>
-</html>
+<table>
+    <tr>
+        <th>여행지</th>
+        <th>추천 시간</th>
+    </tr>
+    <tr>
+        <td>성산일출봉</td>
+        <td>아침</td>
+    </tr>
+</table>
+
+body {
+    background-color: #f5f5f5;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    height: 600px;
+    background-color: lightgreen;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.main {
+    width: 700px;
+    background-color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.place {
+    display: inline-block;
+    width: 180px;
+    height: 200px;
+    background-color: lightyellow;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+function recommend() {
+    document.getElementById("result").innerHTML =
+    "제주도 여행을 즐겨보세요!";
+}
+
