@@ -2,9 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>제주도 여행 가이드 - 힐링 제주</title>
-    
-    <!-- HTML 파일 하나에 CSS 스타일을 함께 포함시키는 부분입니다 -->
+    <title>JEJU - 여행, 그 이상의 제주</title>
     <style>
         /* 기본 스타일 초기화 */
         * {
@@ -14,228 +12,316 @@
         }
 
         body {
-            background-color: #f0f8ff; /* 제주 바다 느낌의 편안한 배경색 */
-            color: #333333;
-            font-family: Arial, sans-serif;
+            font-family: 'Apple SD Gothic Neo', Arial, sans-serif;
+            background-color: #f7f9fa;
+            color: #333;
         }
 
-        /* 1. 헤더 영역 */
+        /* 1. 헤더 영역 (상단 로고, 주요 메뉴, 검색창 등) */
         .header-box {
-            background-color: #0077b6; /* 푸른 바다 색상 */
-            color: #ffffff;
-            padding: 30px;
-            border-bottom: 4px solid #00b4d8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px 30px;
+            border-bottom: 2px solid #e0e6ed;
         }
 
-        .header-box h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
+        .logo h1 {
+            font-size: 24px;
+            color: #0077b6;
+            font-weight: bold;
         }
 
-        .header-box p {
-            font-size: 15px;
+        .logo p {
+            font-size: 12px;
+            color: #666;
         }
 
-        /* 레이아웃 컨테이너 (Flexbox 적용) */
+        .top-nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .top-nav li {
+            margin-left: 20px;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .top-nav a:hover {
+            color: #0077b6;
+        }
+
+        /* 메인 레이아웃 (사이드바 + 본문) */
         .container {
             display: flex;
-            margin: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #e0e6ed;
+            border-radius: 8px;
         }
 
         /* 2. 사이드 메뉴 영역 */
         .sidebar-box {
-            width: 200px;
-            background-color: #ffffff;
-            border: 1px solid #d0e1fd;
-            padding: 15px;
-            margin-right: 20px;
-        }
-
-        .sidebar-box h2 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #0077b6;
-        }
-
-        .sidebar-box ul {
-            list-style: none;
-        }
-
-        .sidebar-box li {
-            margin-bottom: 12px;
-        }
-
-        .sidebar-box a {
-            color: #0077b6;
-            text-decoration: none;
-            display: inline-block;
-            padding: 5px 0;
-        }
-
-        .sidebar-box a:hover {
-            text-decoration: underline;
-        }
-
-        /* 3. 본문 콘텐츠 영역 */
-        .content-box {
-            width: 100%;
-        }
-
-        .section-card {
-            background-color: #ffffff;
-            border: 1px solid #d0e1fd;
+            width: 220px;
             padding: 20px;
-            margin-bottom: 20px;
+            border-right: 1px solid #e0e6ed;
+            background-color: #fafbfc;
         }
 
-        .section-card h2 {
-            font-size: 20px;
-            color: #0077b6;
+        .sidebar-menu {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-menu li {
             margin-bottom: 15px;
         }
 
-        .main-img {
-            width: 100%;
-            height: 250px;
-            border: 1px solid #cccccc;
-            margin-top: 15px;
+        .sidebar-menu a {
+            text-decoration: none;
+            color: #444;
+            font-size: 16px;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 5px;
         }
 
-        /* 4. 관심 메뉴 영역 (3개 카드) */
+        .sidebar-menu a:hover {
+            background-color: #e0f2fe;
+            color: #0077b6;
+            font-weight: bold;
+        }
+
+        .side-banner {
+            padding: 15px;
+            background-color: #f0f8ff;
+            border: 1px dashed #00b4d8;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* 3. 본문 영역 */
+        .content-box {
+            flex: 1;
+            padding: 25px;
+        }
+
+        /* 메인 비주얼 배너 영역 */
+        .hero-banner {
+            position: relative;
+            background-color: #e0f2fe;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        /* [사진 크기 조절] 메인 비주얼 이미지 */
+        .hero-banner img {
+            width: 100%;       /* 너비 (100%는 영역 전체) */
+            height: 280px;     /* 높이: 원하시는 px 크기로 조절하세요 */
+            object-fit: cover; /* 이미지가 찌그러지지 않고 비율 맞춰 잘리도록 설정 */
+            display: block;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero-text h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .btn-more {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #0077b6;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* 추천 여행지 영역 */
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #0077b6;
+        }
+
         .card-group {
             display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
         }
 
         .card {
-            width: 30%;
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 15px;
-            margin-right: 3.33%;
+            width: 31%;
+            background-color: #ffffff;
+            border: 1px solid #e0e6ed;
+            border-radius: 8px;
+            overflow: hidden;
+            padding-bottom: 15px;
+            text-align: center;
         }
 
-        .card:last-child {
-            margin-right: 0;
+        /* [사진 크기 조절] 추천 여행지 카드 이미지 */
+        .card img {
+            width: 100%;       /* 너비 */
+            height: 140px;     /* 높이: 원하시는 px 크기로 조절하세요 */
+            object-fit: cover;
         }
 
         .card h3 {
             font-size: 16px;
-            margin-bottom: 8px;
-            color: #0284c7;
+            margin: 10px 0 5px;
+            color: #222;
         }
 
-        .highlight {
-            color: #2563eb;
+        .card p {
+            font-size: 12px;
+            color: #666;
+            padding: 0 10px;
+            margin-bottom: 12px;
+            height: 36px;
+        }
+
+        .btn-card {
+            display: inline-block;
+            background-color: #f0f8ff;
+            color: #0077b6;
+            border: 1px solid #00b4d8;
+            padding: 6px 14px;
+            font-size: 12px;
+            text-decoration: none;
+            border-radius: 15px;
+        }
+
+        /* 4. 관심 메뉴 영역 (하단 배너) */
+        .interest-banner {
+            background-color: #f0f8ff;
+            border: 1px solid #d0e1fd;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .interest-banner p {
             font-weight: bold;
-        }
-
-        /* 5. 표(Table) 스타일 */
-        .course-table {
-            width: 100%;
-            border: 1px solid #cbd5e1;
-        }
-
-        .course-table th, .course-table td {
-            border: 1px solid #cbd5e1;
-            padding: 10px;
-        }
-
-        .course-table th {
-            background-color: #f1f5f9;
-            color: #0f172a;
-        }
-
-        /* 순서 목록 스타일 */
-        ol {
-            padding-left: 20px;
-        }
-
-        ol li {
-            margin-bottom: 8px;
+            color: #0077b6;
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. 헤더 영역 -->
-    <header id="top-header" class="header-box">
-        <h1>제주도 여행 정보 공유</h1>
-        <p>푸른 바다와 제주 자연이 주는 편안함을 느껴보세요 <br> 10~30대를 위한 감성 여행 가이드</p>
+    <!-- 1. 헤더 영역 (로고, 메뉴, 검색) -->
+    <header class="header-box">
+        <div class="logo">
+            <h1>JEJU</h1>
+            <p>여행, 그 이상의 제주</p>
+        </div>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">여행지</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">여행코스</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- 메인 컨테이너 (사이드 메뉴 + 본문 영역) -->
-    <div id="main-container" class="container">
+    <!-- 레이아웃 컨테이너 -->
+    <div class="container">
 
-        <!-- 2. 사이드 메뉴 영역 -->
-        <aside id="sidebar" class="sidebar-box">
-            <h2>메뉴</h2>
-            <ul>
-                <li><a href="#intro">제주 소개</a></li>
-                <li><a href="#spots">추천 명소</a></li>
-                <li><a href="#courses">코스 안내</a></li>
-                <li><a href="#tips">꿀팁 공유</a></li>
+        <!-- 2. 사이드 메뉴 -->
+        <aside class="sidebar-box">
+            <ul class="sidebar-menu">
+                <li><a href="#">🏠 홈</a></li>
+                <li><a href="#">📍 여행지</a></li>
+                <li><a href="#">🍴 맛집</a></li>
+                <li><a href="#">🗓️ 여행코스</a></li>
+                <li><a href="#">📋 여행팁</a></li>
             </ul>
+            <div class="side-banner">
+                🌴 제주에서 <br> 만나는 행복 ❤️
+            </div>
         </aside>
 
         <!-- 3. 본문 영역 -->
-        <main id="content" class="content-box">
+        <main class="content-box">
 
-            <!-- 메인 비주얼 영역 -->
-            <section id="intro" class="section-card">
-                <h2>1. 제주도 대표 바다 명소</h2>
-                <p>에메랄드빛 바다와 하얀 모래사장이 아름다운 대표 해변입니다.</p>
-                <!-- 수정 후 변경된 코드 -->
-                <img src="제주도.jpg" alt="내가 찍은 제주도 바다" class="main-img">
-            </section>
-
-            <!-- 4. 관심 메뉴 영역 (카드로 3개 구성) -->
-            <section id="spots" class="section-card">
-                <h2>2. 주요 관광 카테고리</h2>
-                <div class="card-group">
-                    <div class="card">
-                        <h3>감성 카페</h3>
-                        <p>바다 전망과 힐링 스팟 <br> <span class="highlight">인스타그램 핫플</span></p>
-                    </div>
-                    <div class="card">
-                        <h3>액티비티</h3>
-                        <p>서핑, 서프보드, 스노클링 <br> <span class="highlight">체험 위주 코스</span></p>
-                    </div>
-                    <div class="card">
-                        <h3>로컬 맛집</h3>
-                        <p>흑돼지, 딱새우, 당근주스 <br> <span class="highlight">현지 추천 식당</span></p>
-                    </div>
+            <!-- 메인 비주얼 배너 -->
+            <section class="hero-banner">
+                <!-- 📸 메인 사진 (src에 내 사진 이름을 적어주세요) -->
+                <img src="제주도.jpg" alt="제주 메인 풍경">
+                <div class="hero-text">
+                    <h2>제주도에서<br>만나는 특별한 순간</h2>
+                    <a href="#" class="btn-more">자세히 보기 ></a>
                 </div>
             </section>
 
-            <!-- 5. 콘텐츠 구성 (표 / 목록) -->
-            <section id="courses" class="section-card">
-                <h2>3. 추천 2박 3일 코스 요약</h2>
-                <table class="course-table">
-                    <tr>
-                        <th>일차</th>
-                        <th>추천 일정</th>
-                        <th>특징</th>
-                    </tr>
-                    <tr>
-                        <td>1일차</td>
-                        <td>함덕해수욕장 ➔ 월정리 카페거리</td>
-                        <td>동쪽 드라이브 & 바다 감상</td>
-                    </tr>
-                    <tr>
-                        <td>2일차</td>
-                        <td>성산일출봉 ➔ 우도 투어</td>
-                        <td>자연 경관 & 자전거/스쿠터</td>
-                    </tr>
-                    <tr>
-                        <td>3일차</td>
-                        <td>협재해수욕장 ➔ 한림공원</td>
-                        <td>서쪽 힐링 & 산책 코스</td>
-                    </tr>
-                </table>
+            <!-- 5. 콘텐츠 구성 (추천 여행지 카드 3개) -->
+            <section>
+                <h2 class="section-title">📍 추천 여행지</h2>
+                <div class="card-group">
+                    
+                    <div class="card">
+                        <!-- 📸 1번 사진 -->
+                        <img src="https://images.unsplash.com/photo-1579168765467-3b235f938439?w=500" alt="성산일출봉">
+                        <h3>성산일출봉</h3>
+                        <p>제주의 대표적인 일출 명소</p>
+                        <a href="#" class="btn-card">자세히 보기</a>
+                    </div>
+
+                    <div class="card">
+                        <!-- 📸 2번 사진 -->
+                        <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=500" alt="한라산">
+                        <h3>한라산</h3>
+                        <p>제주의 자연을 한눈에 볼 수 있는 곳</p>
+                        <a href="#" class="btn-card">자세히 보기</a>
+                    </div>
+
+                    <div class="card">
+                        <!-- 📸 3번 사진 -->
+                        <img src="https://images.unsplash.com/photo-1548115184-bc6544d06a58?w=500" alt="협재해수욕장">
+                        <h3>협재해수욕장</h3>
+                        <p>맑은 바다와 하얀 모래가 있는 해수욕장</p>
+                        <a href="#" class="btn-card">자세히 보기</a>
+                    </div>
+
+                </div>
             </section>
 
-            <section id="tips
+            <!-- 4. 관심 메뉴 영역 (하단 안내 배너) -->
+            <section class="interest-banner">
+                <p>🌴 지금, 제주로 떠나보세요!</p>
+                <a href="#" class="btn-card">자세히 보기 ></a>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
+          
+      
 
           
-   
-  
+                    
