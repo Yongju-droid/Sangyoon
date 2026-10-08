@@ -1,416 +1,254 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>제주도 여행</title>
-
-    <!-- CSS 연결 -->
+    <meta charset="UTF-8">
+    <title>제주도 여행 가이드 - 혼자 혹은 함께 떠나는 제주</title>
+    <!-- 외부 CSS 파일 연결 -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <!-- 1. 헤더 영역 -->
-    <div id="header">
+    <header id="top-header" class="header-box">
+        <h1>제주도 여행 정보 공유</h1>
+        <p>푸른 바다와 제주 자연이 주는 편안함을 느껴보세요 <br> 10~30대를 위한 감성 여행 가이드</p>
+    </header>
 
-        <h1>JEJU TRAVEL</h1>
+    <!-- 메인 컨테이너 (사이드 메뉴 + 본문 영역) -->
+    <div id="main-container" class="container">
 
-        <p>제주도 여행 소개</p>
-
-        <ul>
-            <li><a href="#home">홈</a></li>
-            <li><a href="#place">여행지</a></li>
-            <li><a href="#food">맛집</a></li>
-            <li><a href="#course">여행코스</a></li>
-        </ul>
-
-    </div>
-
-
-    <!-- 사이드 메뉴 + 본문 -->
-    <div id="layout">
-
-        <!-- 2. 사이드 메뉴 -->
-        <div id="sidebar">
-
-            <h3>MENU</h3>
-
+        <!-- 2. 사이드 메뉴 영역 -->
+        <aside id="sidebar" class="sidebar-box">
+            <h2>메뉴</h2>
             <ul>
-                <li><a href="#home">홈</a></li>
-                <li><a href="#place">여행지</a></li>
-                <li><a href="#food">맛집</a></li>
-                <li><a href="#course">여행코스</a></li>
+                <li><a href="#intro">제주 소개</a></li>
+                <li><a href="#spots">추천 명소</a></li>
+                <li><a href="#courses">코스 안내</a></li>
+                <li><a href="#tips">꿀팁 공유</a></li>
             </ul>
+        </aside>
 
-        </div>
+        <!-- 3. 본문 및 콘텐츠 영역 -->
+        <main id="content" class="content-box">
 
+            <!-- 메인 비주얼 / 본문 영역 -->
+            <section id="intro" class="section-card">
+                <h2>1. 제주도 대표 바다 명소</h2>
+                <p>에메랄드빛 바다와 하얀 모래사장이 아름다운 대표 해변입니다.</p>
+                <img src="https://images.unsplash.com/photo-1548115184-bc6544d06a58?w=800" alt="제주도 푸른 바다 풍경" class="main-img">
+            </section>
 
-        <!-- 3. 본문 영역 -->
-        <div id="content">
-
-            <!-- 제주도 소개 -->
-            <div id="home">
-
-                <h2>제주도 여행</h2>
-
-                <p>
-                    아름다운 자연과 다양한 볼거리가 있는
-                    <span>제주도</span>를 소개합니다.
-                </p>
-
-                <br>
-
-                <img src="jeju.jpg" alt="제주도 바다 사진">
-
-                <br><br>
-
-                <a href="#place">여행지 알아보기</a>
-
-            </div>
-
-
-            <!-- 4. 관심 메뉴 영역 -->
-            <div id="place">
-
-                <h2>추천 여행지</h2>
-
-                <p>제주도에서 가볼 만한 여행지를 소개합니다.</p>
-
-
-                <!-- 여행지 1 -->
-                <div class="place">
-
-                    <h3>성산일출봉</h3>
-
-                    <img src="seongsan.jpg" alt="성산일출봉 사진">
-
-                    <p>제주도의 대표적인 관광지입니다.</p>
-
+            <!-- 4. 관심 메뉴 영역 (카드로 3개 구성) -->
+            <section id="spots" class="section-card">
+                <h2>2. 주요 관광 카테고리</h2>
+                <div class="card-group">
+                    <div class="card">
+                        <h3>감성 카페</h3>
+                        <p>바다 전망과 힐링 스팟 <br> <span class="highlight">인스타그램 핫플</span></p>
+                    </div>
+                    <div class="card">
+                        <h3>액티비티</h3>
+                        <p>서핑, 서프보드, 스노클링 <br> <span class="highlight">체험 위주 코스</span></p>
+                    </div>
+                    <div class="card">
+                        <h3>로컬 맛집</h3>
+                        <p>흑돼지, 딱새우, 당근주스 <br> <span class="highlight">현지 추천 식당</span></p>
+                    </div>
                 </div>
+            </section>
 
-
-                <!-- 여행지 2 -->
-                <div class="place">
-
-                    <h3>한라산</h3>
-
-                    <img src="hallasan.jpg" alt="한라산 사진">
-
-                    <p>제주도의 아름다운 자연을 볼 수 있습니다.</p>
-
-                </div>
-
-
-                <!-- 여행지 3 -->
-                <div class="place">
-
-                    <h3>협재해수욕장</h3>
-
-                    <img src="hyeopjae.jpg" alt="협재해수욕장 사진">
-
-                    <p>아름다운 바다를 볼 수 있는 곳입니다.</p>
-
-                </div>
-
-            </div>
-
-
-            <!-- 맛집 -->
-            <div id="food">
-
-                <h2>제주 맛집</h2>
-
-                <p>제주도에서 먹어볼 만한 음식입니다.</p>
-
-                <ul>
-                    <li>제주 흑돼지</li>
-                    <li>갈치조림</li>
-                    <li>고기국수</li>
-                    <li>제주 감귤</li>
-                </ul>
-
-            </div>
-
-
-            <!-- 여행 코스 -->
-            <div id="course">
-
-                <h2>추천 여행 코스</h2>
-
-                <ol>
-                    <li>성산일출봉 방문</li>
-                    <li>제주 맛집 방문</li>
-                    <li>협재해수욕장 방문</li>
-                </ol>
-
-            </div>
-
-
-            <!-- 여행 정보 -->
-            <div id="information">
-
-                <h2>여행 정보</h2>
-
-                <table>
-
+            <!-- 5. 콘텐츠 구성 (표 / 목록) -->
+            <section id="courses" class="section-card">
+                <h2>3. 추천 2박 3일 코스 요약</h2>
+                <table class="course-table">
                     <tr>
-                        <th>여행지</th>
-                        <th>추천 시간</th>
-                        <th>추천 활동</th>
+                        <th>일차</th>
+                        <th>추천 일정</th>
+                        <th>특징</th>
                     </tr>
-
                     <tr>
-                        <td>성산일출봉</td>
-                        <td>아침</td>
-                        <td>일출 보기</td>
+                        <td>1일차</td>
+                        <td>함덕해수욕장 ➔ 월정리 카페거리</td>
+                        <td>동쪽 드라이브 & 바다 감상</td>
                     </tr>
-
                     <tr>
-                        <td>한라산</td>
-                        <td>오전</td>
-                        <td>자연 구경</td>
+                        <td>2일차</td>
+                        <td>성산일출봉 ➔ 우도 투어</td>
+                        <td>자연 경관 & 자전거/스쿠터</td>
                     </tr>
-
                     <tr>
-                        <td>협재해수욕장</td>
-                        <td>오후</td>
-                        <td>바다 구경</td>
+                        <td>3일차</td>
+                        <td>협재해수욕장 ➔ 한림공원</td>
+                        <td>서쪽 힐링 & 산책 코스</td>
                     </tr>
-
                 </table>
+            </section>
 
-            </div>
+            <section id="tips" class="section-card">
+                <h2>4. 여행 준비 체크리스트</h2>
+                <ol>
+                    <li>렌터카 또는 렌트 스쿠터 예약</li>
+                    <li>날씨에 맞는 여벌 옷 및 선크림 준비</li>
+                    <li>주요 카페/맛집 탐방 일정 수립</li>
+                </ol>
+            </section>
 
-
-            <!-- 여행 TIP -->
-            <div id="tip">
-
-                <h2>제주 여행 TIP</h2>
-
-                <p>
-                    여행하기 전에 날씨를 확인하고
-                    편한 옷과 신발을 준비하세요.
-                </p>
-
-                <button onclick="recommend()">
-                    여행지 추천받기
-                </button>
-
-                <p id="result"></p>
-
-            </div>
-
-        </div>
+        </main>
 
     </div>
-
-
-    <!-- 아래쪽 -->
-    <div id="footer">
-
-        <p>JEJU TRAVEL</p>
-
-    </div>
-
-
-    <!-- JS 연결 -->
-    <script src="script.js"></script>
 
 </body>
 </html>
 
-/* 전체 화면 */
-body {
+/* 기본 스타일 초기화 */
+* {
     margin: 0;
-    background-color: white;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    background-color: #f0f8ff; /* 편안한 느낌의 하늘색 배경 */
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
 
 /* 1. 헤더 영역 */
-#header {
-    width: 1000px;
-    height: 150px;
-
-    background-color: #cfe3f3;
-    border: 2px solid black;
-
-    margin: 10px auto;
-    padding: 20px;
+.header-box {
+    background-color: #0077b6; /* 제주 푸른 바다 색상 */
+    color: #ffffff;
+    padding: 30px;
+    border-bottom: 4px solid #00b4d8;
 }
 
-
-/* 헤더 메뉴 */
-#header li {
-    display: inline-block;
-
-    margin: 10px;
+.header-box h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-
-/* 링크 */
-a {
-    color: black;
+.header-box p {
+    font-size: 15px;
 }
 
-
-/* 사이드 메뉴 + 본문 */
-#layout {
+/* 레이아웃 컨테이너 (Flexbox) */
+.container {
     display: flex;
-
-    width: 1040px;
-    margin: 20px auto;
+    margin: 20px;
 }
 
-
-/* 2. 사이드 메뉴 */
-#sidebar {
-    width: 180px;
-    height: 600px;
-
-    background-color: #d8ead3;
-    border: 2px solid black;
-
-    padding: 20px;
+/* 2. 사이드 메뉴 영역 */
+.sidebar-box {
+    width: 200px;
+    background-color: #ffffff;
+    border: 1px solid #d0e1fd;
+    padding: 15px;
+    margin-right: 20px;
 }
 
-
-/* 사이드 메뉴 간격 */
-#sidebar li {
-    margin: 25px;
+.sidebar-box h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #0077b6;
 }
 
+.sidebar-box ul {
+    list-style: none;
+}
+
+.sidebar-box li {
+    margin-bottom: 12px;
+}
+
+.sidebar-box a {
+    color: #0077b6;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.sidebar-box a:hover {
+    text-decoration: underline;
+}
 
 /* 3. 본문 영역 */
-#content {
-    width: 760px;
-
-    margin-left: 20px;
-}
-
-
-/* 제주도 소개 */
-#home {
-    height: 300px;
-
-    background-color: #cfe3f3;
-    border: 2px solid black;
-
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-
-/* 제주도 대표 이미지 */
-#home img {
-    width: 300px;
-    height: 120px;
-}
-
-
-/* 4. 추천 여행지 */
-#place {
-    height: 420px;
-
-    background-color: white;
-    border: 2px solid black;
-
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-
-/* 여행지 카드 */
-.place {
-    display: inline-block;
-
-    width: 190px;
-    height: 260px;
-
-    background-color: #ffe39b;
-    border: 2px solid black;
-
-    margin: 5px;
-    padding: 10px;
-}
-
-
-/* 여행지 사진 */
-.place img {
-    width: 170px;
-    height: 100px;
-}
-
-
-/* 맛집 */
-#food {
-    background-color: #f1d9e1;
-    border: 2px solid black;
-
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-
-/* 여행 코스 */
-#course {
-    background-color: #e5d8f2;
-    border: 2px solid black;
-
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-
-/* 여행 정보 */
-#information {
-    background-color: #d8ead3;
-    border: 2px solid black;
-
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-
-/* 표 */
-table {
+.content-box {
     width: 100%;
-
-    border: 2px solid black;
 }
 
-
-th, td {
-    border: 1px solid black;
-
-    padding: 10px;
-}
-
-
-/* 여행 TIP */
-#tip {
-    background-color: #ffe39b;
-    border: 2px solid black;
-
+.section-card {
+    background-color: #ffffff;
+    border: 1px solid #d0e1fd;
     padding: 20px;
     margin-bottom: 20px;
 }
 
-
-/* 아래쪽 */
-#footer {
-    width: 1000px;
-    height: 60px;
-
-    background-color: #cfe3f3;
-    border: 2px solid black;
-
-    margin: 20px auto;
-    padding: 20px;
+.section-card h2 {
+    font-size: 20px;
+    color: #0077b6;
+    margin-bottom: 15px;
 }
 
-function recommend() {
-
-    document.getElementById("result").innerHTML =
-        "오늘은 성산일출봉을 추천합니다!";
-
+.main-img {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #cccccc;
+    margin-top: 15px;
 }
+
+/* 4. 관심 메뉴 영역 (3개 카드) */
+.card-group {
+    display: flex;
+}
+
+.card {
+    width: 30%;
+    background-color: #e0f2fe;
+    border: 1px solid #90cdf4;
+    padding: 15px;
+    margin-right: 3.33%;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #0284c7;
+}
+
+.highlight {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* 5. 표(Table) 스타일 */
+.course-table {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+}
+
+.course-table th, .course-table td {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+}
+
+.course-table th {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* 목록 스타일 */
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 8px;
+}
+           
+
+             
+                       
 
