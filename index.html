@@ -1,18 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JEJU - 여행, 그 이상의 제주</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+
+    <style>
+        /* JavaScript 실습 영역 */
+        .js-practice {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 25px;
+            margin-top: 30px;
+            background-color: #f5f9f8;
+            border-radius: 12px;
+        }
+
+        .js-practice .section-title {
+            width: 100%;
+            margin: 0;
+        }
+
+        .js-card {
+            flex: 1 1 180px;
+            min-width: 0;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #dce8e4;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .js-card h3 {
+            margin-top: 0;
+        }
+
+        .js-card input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .js-card button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            background-color: #238b70;
+            color: white;
+            cursor: pointer;
+        }
+
+        .js-card button:hover {
+            background-color: #176b55;
+        }
+
+        #text_message {
+            cursor: pointer;
+            line-height: 1.7;
+        }
+
+        #count_number {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
 <body>
 
-    <!-- 1. 헤더 영역 (로고, 메뉴, 검색) -->
+    <!-- 1. 헤더 영역 -->
     <header class="header-box">
         <div class="logo">
             <h1>JEJU</h1>
             <p>여행, 그 이상의 제주</p>
         </div>
+
         <nav class="top-nav">
             <ul>
                 <li><a href="#">홈</a></li>
@@ -36,6 +104,7 @@
                 <li><a href="#">🗓️ 여행코스</a></li>
                 <li><a href="#">📋 여행팁</a></li>
             </ul>
+
             <div class="side-banner">
                 🌴 제주에서 <br> 만나는 행복 ❤️
             </div>
@@ -46,21 +115,21 @@
 
             <!-- 메인 비주얼 배너 -->
             <section class="hero-banner">
-                <!-- 📸 메인 사진 (src에 내 사진 이름을 적어주세요) -->
                 <img src="제주도 배경.jpg" alt="제주 메인 풍경">
+
                 <div class="hero-text">
                     <h2>제주도에서<br>만나는 특별한 순간</h2>
-                    <a href="#" class="btn-more">자세히 보기 ></a>
+                    <a href="#" class="btn-more">자세히 보기 &gt;</a>
                 </div>
             </section>
 
-            <!-- 5. 콘텐츠 구성 (추천 여행지 카드 3개) -->
+            <!-- 4. 추천 여행지 -->
             <section>
                 <h2 class="section-title">📍 추천 여행지</h2>
+
                 <div class="card-group">
-                    
+
                     <div class="card">
-                        <!-- 📸 1번 사진 -->
                         <img src="성산일출봉.jpg" alt="성산일출봉">
                         <h3>성산일출봉</h3>
                         <p>제주의 대표적인 일출 명소</p>
@@ -68,7 +137,6 @@
                     </div>
 
                     <div class="card">
-                        <!-- 📸 2번 사진 -->
                         <img src="협재해수욕장.jpg" alt="협재해수욕장">
                         <h3>협재해수욕장</h3>
                         <p>맑은 바다와 하얀 모래가 있는 해수욕장</p>
@@ -76,7 +144,6 @@
                     </div>
 
                     <div class="card">
-                        <!-- 📸 3번 사진 -->
                         <img src="올레시장.jpg" alt="올레시장">
                         <h3>올레시장</h3>
                         <p>먹거리와 정이 넘치는 제주 대표 전통시장</p>
@@ -86,47 +153,67 @@
                 </div>
             </section>
 
-            <!-- 4. 관심 메뉴 영역 (하단 안내 배너) -->
+            <!-- 5. 하단 안내 배너 -->
             <section class="interest-banner">
                 <p>🌴 지금, 제주로 떠나보세요!</p>
-                <a href="#" class="btn-card">자세히 보기 ></a>
-            </section>
-            
-            <!-- JavaScript 실습 -->
-            <section class="interest-banner">
-
-                <h3>1. 로그인</h3>
-                <form id="loginForm">
-                    <input type="text" id="user_Id" placeholder="아이디" required>
-                    <br>
-                    <input type="password" id="user_Pw" placeholder="비밀번호" required>
-                    <br>
-                    <button type="submit">로그인</button>
-                </form>
-
-                <br>
-
-                <h3>2. 글자 색 바꾸기</h3>
-                <h3 id="text_message">
-                    안녕하세요! 만나서 반갑습니다. 클릭하면 색이 바뀝니다.
-                </h3>
-
-                <br>
-
-                <h3>3. 카운터</h3>
-                <button id="counter">counter</button>
-                <label id="count_number">0번 클릭</label>
-
+                <a href="#" class="btn-card">자세히 보기 &gt;</a>
             </section>
 
+            <!-- 6. JavaScript 실습 영역 -->
+            <section class="js-practice">
+
+                <h2 class="section-title">💻 JavaScript 체험</h2>
+
+                <!-- 로그인 -->
+                <div class="js-card">
+                    <h3>1. 로그인</h3>
+
+                    <form id="loginForm">
+                        <input
+                            type="text"
+                            id="user_Id"
+                            placeholder="아이디"
+                            required
+                        >
+
+                        <input
+                            type="password"
+                            id="user_Pw"
+                            placeholder="비밀번호"
+                            required
+                        >
+
+                        <button type="submit">로그인</button>
+                    </form>
+                </div>
+
+                <!-- 글자 색 바꾸기 -->
+                <div class="js-card">
+                    <h3>2. 글자 색 바꾸기</h3>
+
+                    <p id="text_message">
+                        안녕하세요! 만나서 반갑습니다.
+                        문구를 클릭하면 색이 바뀝니다.
+                    </p>
+                </div>
+
+                <!-- 카운터 -->
+                <div class="js-card">
+                    <h3>3. 카운터</h3>
+
+                    <p id="count_number">0번 클릭</p>
+
+                    <button type="button" id="counter">
+                        클릭하기 +
+                    </button>
+                </div>
+
+            </section>
 
         </main>
-
-    </div>
-    
     </div>
 
-    <!-- JavaScript 코드 시작 -->
+    <!-- JavaScript 코드 -->
     <script>
         const id = "junamsu";
         const pw = "helloworld";
@@ -137,8 +224,11 @@
         loginForm.onsubmit = function(e) {
             e.preventDefault();
 
-            const inputId = document.querySelector("#user_Id").value;
-            const inputPw = document.querySelector("#user_Pw").value;
+            const inputId =
+                document.querySelector("#user_Id").value;
+
+            const inputPw =
+                document.querySelector("#user_Pw").value;
 
             if (inputId === id && inputPw === pw) {
                 alert("로그인 성공!");
@@ -149,8 +239,10 @@
 
         // 2. 카운터
         let number = 0;
+
         const counter = document.querySelector("#counter");
-        const count_number = document.querySelector("#count_number");
+        const count_number =
+            document.querySelector("#count_number");
 
         counter.onclick = function() {
             number++;
@@ -158,7 +250,8 @@
         };
 
         // 3. 글자 색 바꾸기
-        const text_message = document.querySelector("#text_message");
+        const text_message =
+            document.querySelector("#text_message");
 
         text_message.onclick = function() {
             const r = Math.floor(Math.random() * 256);
@@ -169,16 +262,6 @@
                 "rgb(" + r + "," + g + "," + b + ")";
         };
     </script>
-    <!-- JavaScript 코드 끝 -->
 
 </body>
 </html>
-
-
-</body>
-</html>
-          
-      
-
-          
-                    
