@@ -28,11 +28,9 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
-            width: 100%;
         }
 
         .sidebar-login input {
-            display: block;
             width: 100%;
             min-width: 0;
             padding: 9px;
@@ -42,11 +40,10 @@
         }
 
         .sidebar-login button {
-            width: 100%;
-            padding: 9px 8px;
+            padding: 9px;
             border: 1px solid #00a5e8;
             border-radius: 20px;
-            background-color: white;
+            background: white;
             color: #008acb;
             cursor: pointer;
         }
@@ -57,7 +54,7 @@
             background-color: #eaf8ff;
         }
 
-        /* 카운터 - 추천 여행지 아래 */
+        /* 제주 여행지 좋아요 */
         .counter-widget {
             display: flex;
             flex-wrap: wrap;
@@ -96,12 +93,12 @@
             padding: 9px 14px;
             border: 1px solid #00a5e8;
             border-radius: 20px;
-            background-color: white;
+            background: white;
             color: #008acb;
             cursor: pointer;
         }
 
-        /* 하단 배너의 글자 색 변경 */
+        /* 하단 배너의 글자 색 바꾸기 */
         .interest-banner .color-change-area {
             display: flex;
             flex-wrap: wrap;
@@ -118,12 +115,11 @@
             padding: 7px 12px;
             border: 1px solid #00a5e8;
             border-radius: 20px;
-            background-color: white;
+            background: white;
             color: #008acb;
             cursor: pointer;
         }
 
-        /* 작은 화면에서도 보기 편하게 */
         @media (max-width: 850px) {
             .sidebar-login {
                 margin: 16px 8px;
@@ -196,7 +192,6 @@
                 </form>
             </div>
 
-            <!-- 기존 사이드 배너 -->
             <div class="side-banner">
                 🌴 제주에서 <br> 만나는 행복 ❤️
             </div>
@@ -206,7 +201,7 @@
         <!-- 4. 본문 영역 -->
         <main class="content-box">
 
-            <!-- 메인 이미지 배너 -->
+            <!-- 메인 비주얼 배너 -->
             <section class="hero-banner">
                 <img src="제주도 배경.jpg" alt="제주 메인 풍경">
 
@@ -246,20 +241,20 @@
                 </div>
             </section>
 
-            <!-- 카운터 기능: 추천 여행지 아래 -->
+            <!-- 제주 여행지 좋아요 -->
             <section class="counter-widget">
-                <h3>📍 제주 여행 둘러보기</h3>
+                <h3>❤️ 제주 여행지 좋아요</h3>
 
                 <div class="counter-content">
-                    <p id="count_number">0번 클릭</p>
+                    <p id="count_number">❤️ 좋아요 0</p>
 
                     <button type="button" id="counter">
-                        둘러보기 +
+                        ❤️ 좋아요
                     </button>
                 </div>
             </section>
 
-            <!-- 하단 배너 및 글자 색 바꾸기 -->
+            <!-- 하단 안내 배너 및 글자 색 바꾸기 -->
             <section class="interest-banner">
 
                 <div class="color-change-area">
@@ -304,7 +299,7 @@
             }
         };
 
-        // 카운터 기능
+        // 제주 여행지 좋아요 기능
         let number = 0;
 
         const counter = document.querySelector("#counter");
@@ -313,7 +308,7 @@
 
         counter.onclick = function() {
             number++;
-            countNumber.textContent = number + "번 클릭";
+            countNumber.textContent = "❤️ 좋아요 " + number;
         };
 
         // 글자 색 바꾸기 기능
@@ -332,7 +327,6 @@
                 "rgb(" + r + ", " + g + ", " + b + ")";
         }
 
-        // 문구 또는 버튼을 클릭하면 글자 색 변경
         textMessage.onclick = changeTextColor;
         changeColor.onclick = changeTextColor;
     </script>
@@ -341,5 +335,12 @@
 </html>
 
 
+
+        
+                  
+
+                
+
+        
          
    
